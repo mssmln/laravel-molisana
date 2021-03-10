@@ -2,3 +2,7 @@ body {
   background-color: red;
 }
 
+main.sfondo {
+  background-image: url(/images/molisana-home.jpg?cb7db241726fb646d7e1c8553429c07c);
+}
+

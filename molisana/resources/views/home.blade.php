@@ -3,7 +3,7 @@
 @section('title','homepage Molisana')
 
 @section('content')
-<main>
-    <p>Ireland</p>
-</main>
+    <main class="sfondo">
+        <p>Ireland</p>
+    </main>
 @endsection
