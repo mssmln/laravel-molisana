@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title','homepage Molisana')
+@section('title','prodotti Molisana')
 
 @section('content')
 <main>
-    <p>Ireland</p>
+    <p>mettere i prodotti</p>
 </main>
 @endsection
