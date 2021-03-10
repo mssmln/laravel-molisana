@@ -1,3 +1,18 @@
 main.sfondo{
     background-image: url('../../img/molisana-home.jpg');
 }
+
+@include container;
+
+.paste{
+    @include flex;
+
+    .box{
+        width: 500px;
+        display: flex; //disattivandolo ci sarebbe dello spazio tra le immagini
+
+        img{
+            width: 100%;
+        }
+    }
+}

@@ -1,8 +1,54 @@
-body {
-  background-color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header .logo {
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  font-size: 20px;
+  padding: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
 }
 
 main.sfondo {
   background-image: url(/images/molisana-home.jpg?cb7db241726fb646d7e1c8553429c07c);
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  background-color: red;
+}
+
+.paste {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.paste .box {
+  width: 500px;
+  display: flex;
+}
+
+.paste .box img {
+  width: 100%;
 }
 

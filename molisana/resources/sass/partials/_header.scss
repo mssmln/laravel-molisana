@@ -1,0 +1,20 @@
+header{
+    .logo{
+        text-align: center;
+    }
+
+    nav ul{
+        list-style: $list_style;
+        @include flex;
+
+        li{
+            font-size: 20px;
+            padding: 20px;
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
