@@ -4,6 +4,8 @@
 
 @section('content')
 <main>
+@dd($data)
+
     <p>mettere i prodotti</p>
 </main>
 @endsection
