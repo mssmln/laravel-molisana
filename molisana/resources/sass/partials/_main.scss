@@ -8,11 +8,20 @@ main.sfondo{
     @include flex;
 
     .box{
+        position: relative;
         width: 500px;
         display: flex; //disattivandolo ci sarebbe dello spazio tra le immagini
 
         img{
             width: 100%;
+        }
+        .info{
+            display: none;
+            text-align: center;
+            @include absolute;
+        }
+        &:hover .info{
+            display: block;
         }
     }
 }

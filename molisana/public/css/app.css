@@ -33,7 +33,6 @@ main.sfondo {
 .container {
   width: 1300px;
   margin: 0 auto;
-  background-color: red;
 }
 
 .paste {
@@ -44,11 +43,32 @@ main.sfondo {
 }
 
 .paste .box {
+  position: relative;
   width: 500px;
   display: flex;
 }
 
 .paste .box img {
   width: 100%;
+}
+
+.paste .box .info {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.paste .box:hover .info {
+  display: block;
+}
+
+footer {
+  background-image: url(/images/footer-montagne-bottom.jpg?d53b01335f4c26b84b40ca2ab0a64ece);
+  height: 200px;
+  margin-top: 50px;
+  background-size: cover;
 }
 

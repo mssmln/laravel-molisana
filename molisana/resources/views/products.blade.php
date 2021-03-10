@@ -11,13 +11,18 @@
         @foreach($formatiPasta as $formato)
             <div class="box">
                 <img src="{{ $formato['src']}}" alt="{{ $formato['titolo']}}">
+                <div class="info">
+                    <h2>
+                        {{ $formato['titolo']}}
+                    </h2>
+                    <h3>
+                        {{ $formato['tipo']}}
+                    </h3>
+                </div>
             </div>
         @endforeach
 
     </div>
-    @foreach($formatiPasta as $formato)
-        {{ $formato['titolo']}}
-        {{ $formato['tipo']}}
-    @endforeach
+    
 </main>
 @endsection
