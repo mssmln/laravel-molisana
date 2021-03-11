@@ -40,7 +40,20 @@ Route::get('/prodotti', function () {
     $pasta = config('pasta');
     //dd($pasta);
 
-    $pasta_lunga = array_filter($pasta, function($element) {
+    //variant with where method filter
+    $collection = collect($pasta);
+    //dump($collection); it worked 
+
+    //non potevi farlo direttamente su $pasta , hai bisogno di farlo da un collect()
+    $pasta_lunga = $collection->where('tipo','lunga');
+    //dd($pasta_lunga); it worked 
+    $pasta_corta = $collection->where('tipo','corta');
+    $pasta_cortissima = $collection->where('tipo','cortissima');
+
+
+
+    // variant with array_filter
+    /*$pasta_lunga = array_filter($pasta, function($element) {
         //dump($element);
         return $element['tipo'] == 'lunga';
     });
@@ -54,7 +67,9 @@ Route::get('/prodotti', function () {
     $pasta_cortissima = array_filter($pasta, function($element) {
         //dump($element);
         return $element['tipo'] == 'cortissima';
-    });
+    });*/
+
+
 
     //$data = ['formatiPasta' => $pasta]; vecchio
     $data = ['formatiPasta' => [
