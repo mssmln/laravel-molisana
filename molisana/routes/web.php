@@ -28,9 +28,13 @@ Route::get('/', function () {
     return view('home');
 })->name('route-home');
 
+
+
 Route::get('/news', function () {
     return view('news');
 })->name('route-informazioni');
+
+
 
 Route::get('/prodotti', function () {
     $pasta = config('pasta');
@@ -65,10 +69,19 @@ Route::get('/prodotti', function () {
     return view('products',$data);
 })->name('route-prodotti');
 
+
+
+
 Route::get('/dettagli/{indice}', function ($indice) {
     $pasta = config('pasta');
-    $prodotto = $pasta[$indice];
-    $data = ['prodotti' => $prodotto];
+
+    if(is_numeric($indice) && $indice >= 0 && $indice < count($pasta) ){
+        $prodotto = $pasta[$indice];
+        $data = ['prodotti' => $prodotto];
+    } else{
+        abort('404');
+    }
+    
     
     //return 'ciao'.$indice;
     return view('details',$data);
