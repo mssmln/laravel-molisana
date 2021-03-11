@@ -36,8 +36,32 @@ Route::get('/prodotti', function () {
     $pasta = config('pasta');
     //dd($pasta);
 
-         $data = ['formatiPasta' => $pasta];
-         //dd($data); imported data correctly
+    $pasta_lunga = array_filter($pasta, function($element) {
+        //dump($element);
+        return $element['tipo'] == 'lunga';
+    });
+    //dd($pasta_lunga); it worked
+
+    $pasta_corta = array_filter($pasta, function($element) {
+        //dump($element);
+        return $element['tipo'] == 'corta';
+    });
+    
+    $pasta_cortissima = array_filter($pasta, function($element) {
+        //dump($element);
+        return $element['tipo'] == 'cortissima';
+    });
+
+    //$data = ['formatiPasta' => $pasta]; vecchio
+    $data = ['formatiPasta' => [
+        'pasta Lunga' => $pasta_lunga,
+        'pasta Corta' => $pasta_corta,
+        'pasta Cortissima' => $pasta_cortissima
+        ]
+    ];
+
+
+    //dd($data); imported data correctly
     return view('products',$data);
 })->name('route-prodotti');
 

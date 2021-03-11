@@ -9,20 +9,28 @@
 
     <div class="paste">
         @foreach($formatiPasta as $key => $formato)
-            <div class="box">
-                <img src="{{ $formato['src']}}" alt="{{ $formato['titolo']}}">
-                <a href="{{ route('route-details',['indice' => $key ]) }}">
-                    <div class="info">
-                        <h2>
-                            {{ $formato['titolo']}}
-                        </h2>
-                        <h3>
-                            {{ $formato['tipo']}}
-                        </h3>
-                    </div>
-                </a>
-                
-            </div>
+            @php //@dump($key);@endphp
+            <h2>
+                {{ $key }}
+            </h2>
+            @foreach($formato as $key => $tipo)
+                <div class="box">
+                    <img src="{{ $tipo['src']}}" alt="{{ $tipo['titolo']}}">
+                    <a href="{{ route('route-details',['indice' => $key ]) }}">
+                        <div class="info">
+                            <h2>
+                                {{ $tipo['titolo']}}
+                            </h2>
+                            <h3>
+                                {{ $tipo['tipo']}}
+                            </h3>
+                        </div>
+                    </a>
+                    
+                </div>
+
+            @endforeach
+            
         @endforeach
 
     </div>
