@@ -14,10 +14,12 @@ header{
             a{
                 text-decoration: none;
                 color: black;
+
+                &.active{
+                    text-decoration: underline;
+                }
             }
-            a.active{
-                background-color: #fff;
-            }
+            
         }
     }
 }

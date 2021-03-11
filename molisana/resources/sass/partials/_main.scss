@@ -4,24 +4,51 @@ main.sfondo{
 
 @include container;
 
+//products.blade.php
 .paste{
-    @include flex;
 
-    .box{
-        position: relative;
-        width: 500px;
-        display: flex; //disattivandolo ci sarebbe dello spazio tra le immagini
+    h2{
+        text-align: center;
+        padding: 20px;
+    }
 
-        img{
-            width: 100%;
+    .tipo-pasta{
+        @include flex;
+
+
+        .box{
+            position: relative;
+            width: 500px;
+            display: flex; //disattivandolo ci sarebbe dello spazio tra le immagini
+    
+            img{
+                width: 100%;
+            }
+            .info{
+                display: none;
+                text-align: center;
+                @include absolute;
+            }
+            &:hover .info{
+                display: block;
+            }
         }
-        .info{
-            display: none;
-            text-align: center;
-            @include absolute;
-        }
-        &:hover .info{
-            display: block;
-        }
+
+    }
+
+    
+}
+
+
+//details.blade.php
+main{
+
+    .foto img{
+        width: 100%;
+        display: block;
+    }
+
+    .descrizione{
+        font-size: 40px;
     }
 }

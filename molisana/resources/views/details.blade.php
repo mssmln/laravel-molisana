@@ -9,19 +9,19 @@
 @section('content')
 <main>
     @php //@dd($prodotti); @endphp 
-    <div>
+    <div class="foto">
         <img src="{{ $prodotti['src-h']}}" alt="{{ $prodotti['titolo']}}">
         <img src="{{ $prodotti['src-p']}}" alt="{{ $prodotti['titolo']}}">
     </div>
 
-    <div class="specifiche">
+    <div class="specifiche container">
         <i class="fas fa-info-circle"></i>
         <i class="fas fa-weight"></i>
         <i class="fas fa-clock"></i>
 
     </div>
 
-    <div class="descrizione">
+    <div class="descrizione container">
         @php //serve per convertire i tag html da stringa a funzionanti @endphp
         <p>
             {!! $prodotti['descrizione'] !!} 

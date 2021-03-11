@@ -27,7 +27,7 @@ header nav ul li a {
 }
 
 header nav ul li a.active {
-  background-color: #fff;
+  text-decoration: underline;
 }
 
 main.sfondo {
@@ -39,24 +39,29 @@ main.sfondo {
   margin: 0 auto;
 }
 
-.paste {
+.paste h2 {
+  text-align: center;
+  padding: 20px;
+}
+
+.paste .tipo-pasta {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.paste .box {
+.paste .tipo-pasta .box {
   position: relative;
   width: 500px;
   display: flex;
 }
 
-.paste .box img {
+.paste .tipo-pasta .box img {
   width: 100%;
 }
 
-.paste .box .info {
+.paste .tipo-pasta .box .info {
   display: none;
   text-align: center;
   position: absolute;
@@ -65,8 +70,17 @@ main.sfondo {
   transform: translate(-50%, -50%);
 }
 
-.paste .box:hover .info {
+.paste .tipo-pasta .box:hover .info {
   display: block;
+}
+
+main .foto img {
+  width: 100%;
+  display: block;
+}
+
+main .descrizione {
+  font-size: 40px;
 }
 
 footer {
