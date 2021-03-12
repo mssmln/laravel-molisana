@@ -79,6 +79,15 @@ main .foto img {
   display: block;
 }
 
+main .specifiche {
+  text-align: center;
+}
+
+main .specifiche i {
+  font-size: 30px;
+  padding: 20px;
+}
+
 main .descrizione {
   font-size: 40px;
 }

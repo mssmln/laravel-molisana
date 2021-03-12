@@ -16,9 +16,11 @@
 
     <div class="specifiche container">
         <i class="fas fa-info-circle"></i>
+        @php //<div>{{ $prodotti['tipo']}}</div>@endphp
         <i class="fas fa-weight"></i>
+        @php //<div>{{ $prodotti['peso']}}</div>@endphp
         <i class="fas fa-clock"></i>
-
+        @php //<div>{{ $prodotti['cottura']}}</div>@endphp
     </div>
 
     <div class="descrizione container">
